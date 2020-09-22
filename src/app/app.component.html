@@ -1,1 +1,6 @@
-UPC
+<mat-toolbar color="primary" class="toolbar">
+  <span>Mi App</span>
+</mat-toolbar>
+<div class="container">
+  <app-radio-card *ngFor="let item of items" [item]="item"></app-radio-card>
+</div>

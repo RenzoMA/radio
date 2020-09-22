@@ -1,0 +1,22 @@
+:host {
+  --items-per-row: 3;
+  --item-margin: 8px;
+}
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  width: calc(100% - (var(--items-per-row) * var(--item-margin) * 2));
+  margin-top: 80px;
+}
+app-radio-card {
+  margin: var(--item-margin);
+  width: calc((100% / var(--items-per-row)) - 2 * var(--item-margin));
+}

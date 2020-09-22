@@ -1,0 +1,18 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ item.Medio }}</mat-card-title>
+    <mat-card-subtitle
+      >{{ item.Descripcion }} - {{ item.Autor }}</mat-card-subtitle
+    >
+  </mat-card-header>
+  <img mat-card-image src="{{ item.UrlAmazonS3 }}" />
+  <mat-card-content>
+    <mat-slider
+        [disabled]="true"
+        [max]="getDurationInSeconds()"
+        [min]="min"
+        [step]="step"
+        [(ngModel)]="value">
+    </mat-slider>
+  </mat-card-content>
+</mat-card>
