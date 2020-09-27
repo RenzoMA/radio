@@ -43,16 +43,17 @@ export class RadioCardComponent implements OnInit, OnDestroy {
     });
   }
   getDurationInSeconds() {
-    return this.item.Duracion;
+    return this.item.duracion;
   }
 
   setCurrentValue() {
-    const inicio = moment(this.item.FechaHoraInicio);
-    const fin = moment(this.item.FechaHoraFin);
+    const inicio = moment(this.item.fechaHoraInicio);
+    console.log(inicio);
+    const fin = moment(this.item.fechaHoraFin);
     const now = moment();
     const endDiffNow = moment.duration(fin.diff(now));
     if (endDiffNow.asSeconds() < 0) {
-      this.value = this.item.Duracion;
+      this.value = this.item.duracion;
       this.completed.emit();
     } else {
       const currentProgress = moment.duration(now.diff(inicio));

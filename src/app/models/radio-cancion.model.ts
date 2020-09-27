@@ -1,12 +1,12 @@
 export interface RadioCancion {
-  Id: number;
-  Codigo: number;
-  Descripcion: string;
-  Descripcion2: string;
-  Autor: string;
-  Duracion: number;
-  FechaHoraInicio: Date;
-  FechaHoraFin: Date;
-  UrlAmazonS3: string;
-  Medio: string;
+  id: number;
+  codigo: string;
+  descripcion: string;
+  descripcion2: string;
+  autor: string;
+  duracion: number;
+  fechaHoraInicio: string;
+  fechaHoraFin: string;
+  urlAmazonS3: string;
+  medio: string;
 }
