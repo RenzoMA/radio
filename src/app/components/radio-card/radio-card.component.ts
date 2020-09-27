@@ -5,6 +5,7 @@ import {
   OnDestroy,
   Output,
   EventEmitter,
+  ɵCodegenComponentFactoryResolver,
 } from "@angular/core";
 import { RadioCancion } from "../../models/radio-cancion.model";
 import * as moment from "moment";
@@ -48,7 +49,6 @@ export class RadioCardComponent implements OnInit, OnDestroy {
 
   setCurrentValue() {
     const inicio = moment(this.item.fechaHoraInicio);
-    console.log(inicio);
     const fin = moment(this.item.fechaHoraFin);
     const now = moment();
     const endDiffNow = moment.duration(fin.diff(now));
@@ -57,7 +57,6 @@ export class RadioCardComponent implements OnInit, OnDestroy {
       this.completed.emit();
     } else {
       const currentProgress = moment.duration(now.diff(inicio));
-      console.log(currentProgress.asSeconds());
       this.value = currentProgress.asSeconds();
     }
   }

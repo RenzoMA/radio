@@ -8,7 +8,7 @@ import { RadioCancion } from "../models/radio-cancion.model";
   providedIn: "root",
 })
 export class RadioService {
-  url = "";
+  url = "http://54.91.33.58:8080/baas-acortech-audioplayer/emision";
   constructor(private httpClient: HttpClient) {}
   getData(): Observable<RadioCancion[]> {
     return this.httpClient.get<RadioCancion[]>(this.url);

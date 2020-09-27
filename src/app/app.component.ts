@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
     });
   }
   getData() {
-    this.radioService.getFakeData().subscribe((items) => {
+    this.radioService.getData().subscribe((items) => {
       this.items = items;
     });
   }

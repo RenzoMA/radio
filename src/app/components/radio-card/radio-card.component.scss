@@ -1,7 +1,48 @@
 mat-slider {
   width: 100%;
 }
+.example-card {
+  overflow: hidden;
+}
 img {
   object-fit: cover;
   height: 200px;
+  position: relative;
 }
+
+%img {
+  content: " ";
+  display: block;
+  position: absolute;
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  background-size: 100% 200px;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+.corazon:before {
+  @extend %img;
+  background-image: url("../../../assets/radio-corazon.jpg");
+}
+.la-mega:before {
+  @extend %img;
+  background-image: url("../../../assets/la-mega.jpg");
+}
+.la-zona:before {
+  @extend %img;
+  background-image: url("../../../assets/la-zona.jpg");
+}
+.oxigeno:before {
+  @extend %img;
+  background-image: url("../../../assets/oxigeno.jpg");
+}
+.felicidad:before {
+  @extend %img;
+  background-image: url("../../../assets/felicidad.jpg");
+}
+.studio-92:before {
+  @extend %img;
+  background-image: url("../../../assets/studio-92.jpg");
+}
+

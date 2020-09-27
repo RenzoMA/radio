@@ -5,14 +5,26 @@
       >{{ item.descripcion }} - {{ item.autor }}</mat-card-subtitle
     >
   </mat-card-header>
-  <img mat-card-image src="{{ item.urlAmazonS3 }}" />
+  <img
+    [ngClass]="{
+      corazon: item.medio === 'Corazon',
+      'la-mega': item.medio === 'La Mega',
+      'la-zona': item.medio === 'La Zona',
+      oxigeno: item.medio === 'Oxígeno',
+      felicidad: item.medio === 'Felicidad',
+      'studio-92': item.medio === 'Studio 92'
+    }"
+    mat-card-image
+    src="{{ item.urlAmazonS3 }}"
+  />
   <mat-card-content>
     <mat-slider
-        [disabled]="true"
-        [max]="getDurationInSeconds()"
-        [min]="min"
-        [step]="step"
-        [(ngModel)]="value">
+      [disabled]="true"
+      [max]="getDurationInSeconds()"
+      [min]="min"
+      [step]="step"
+      [(ngModel)]="value"
+    >
     </mat-slider>
   </mat-card-content>
 </mat-card>
